@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DecorHome — магазин декора</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">DecorHome</div>
+  <nav>
+    <a onclick="filterProducts('all')">Все</a>
+    <a onclick="filterProducts('candles')">Свечи</a>
+    <a onclick="filterProducts('vases')">Вазы</a>
+    <a onclick="filterProducts('art')">Картины</a>
+    <a onclick="filterProducts('decor')">Декор</a>
+  </nav>
+
+  <div class="cart-icon" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+  </div>
+</header>
+
+<section class="hero">
+<h1>Стильный декор для вашего дома</h1>
+<p>Свечи • Вазы • Картины • Рамки • Статуэтки • Цветы</p>
+</section>
+
+<main>
+
+<div class="products" id="products">
+
+<div class="card" data-category="candles">
+<img src="https://images.unsplash.com/photo-1603006905003-be475563bc59">
+<h3>Арома свеча</h3>
+<p>$12</p>
+<button onclick="addToCart('Арома свеча',12)">В корзину</button>
+</div>
+
+<div class="card" data-category="vases">
+<img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
+<h3>Керамическая ваза</h3>
+<p>$20</p>
+<button onclick="addToCart('Керамическая ваза',20)">В корзину</button>
+</div>
+
+<div class="card" data-category="art">
+<img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4">
+<h3>Картина минимализм</h3>
+<p>$35</p>
+<button onclick="addToCart('Картина минимализм',35)">В корзину</button>
+</div>
+
+<div class="card" data-category="decor">
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
+<h3>Статуэтка</h3>
+<p>$18</p>
+<button onclick="addToCart('Статуэтка',18)">В корзину</button>
+</div>
+
+<div class="card" data-category="decor">
+<img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2">
+<h3>Искусственные цветы</h3>
+<p>$10</p>
+<button onclick="addToCart('Искусственные цветы',10)">В корзину</button>
+</div>
+
+<div class="card" data-category="decor">
+<img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d">
+<h3>Фоторамка</h3>
+<p>$9</p>
+<button onclick="addToCart('Фоторамка',9)">В корзину</button>
+</div>
+
+</div>
+
+</main>
+
+<div class="cart" id="cart">
+<h2>Корзина</h2>
+<ul id="cart-items"></ul>
+<p class="total">Итого: $<span id="total">0</span></p>
+<button class="checkout" onclick="checkout()">Оплатить</button>
+</div>
+
+<footer>
+<p>© 2026 DecorHome</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
